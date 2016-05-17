@@ -1,0 +1,36 @@
+{
+  "name": "postcss-increase-text-size",
+  "version": "1.0.0",
+  "description": "PostCSS Increase Text Size is PostCSS plugin that helps automaticaly increase text size and line height",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "increase font size",
+    "web accessibility"
+  ],
+  "author": "Eduárd Pocstár <admdh.com@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/admdh/postcss-increase-text-sizes",
+  "bugs": {
+    "url": "https://github.com/admdh/postcss-increase-text-sizes/issues"
+  },
+  "homepage": "https://github.com/admdh/postcss-increase-text-sizes",
+  "dependencies": {
+    "postcss": "^5.0.21",
+    "parse-css-font": "^2.0.2",
+    "units-css": "^0.4.0",
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "eslint": "^2.10.0",
+    "eslint-config-postcss": "^2.0.2"
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "ava && eslint test/test.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  }
+}
