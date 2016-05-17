@@ -7,4 +7,36 @@ PostCSS Increase Text Size is a PostCSS plugin that helps automaticaly increase 
 ## Why?
 Accessible websites are getting more popular. Some countries even pass laws obliging IT companies create web accessible websites. This plugin focused to help with building web accessible web sites.
 
+<img title="Increase Text Size Example" src="img/increase-text-size-example.png">
 
+
+## Basic Usage
+```js
+postcss([
+	require('postcss-increase-text-size')({
+		fontSizeMultiplyBy: 1.2,
+		lineheightMultiplyBy: 1.2
+	})
+]);
+```
+input.css:
+```css
+p{
+	font-size: 12px;
+	line-height: 16px;
+}
+```
+output.css:
+```css
+p{
+	font-size: 14.4px;
+	line-height: 19.2px;
+}
+```
+
+
+## Options
+| Name                              | Default Value   | Description    |
+|:----------------------------------|:----------------|:---------------|
+| `fontSizeMultiplyBy`              | `1.2`           | All ```font-size``` properties will be multiplied by this option |
+| `lineheightMultiplyBy`            | `1.2`           | All ```line-height``` properties will be multiplied by this option |
