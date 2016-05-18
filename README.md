@@ -30,8 +30,8 @@ p{
 output.css:
 ```css
 p{
-	font-size: 14.4px;
-	line-height: 19.2px;
+	font-size: 14px;
+	line-height: 19px;
 }
 ```
 
