@@ -18,11 +18,11 @@ module.exports = postcss.plugin('postcss-increase-text-size', function (opts) {
 				var lineHeight = fontValue.lineHeight;
 				var fontValueCon;
 				 
-				fontSize = fontSize.value * opts.fontSizeMultiplyBy + fontSize.unit;
+				fontSize = Math.round(fontSize.value * opts.fontSizeMultiplyBy) + fontSize.unit;
 				 
 				if (lineHeight != 'normal' ){
 					var newlineHeight = units.parse(lineHeight)
-					newlineHeight = newlineHeight.value * opts.lineheightMultiplyBy + newlineHeight.unit;
+					newlineHeight = Math.round(newlineHeight.value * opts.lineheightMultiplyBy) + newlineHeight.unit;
 					fontValueCon = fontSize + '/' + newlineHeight;
 				} else {
 					fontValueCon = fontSize
@@ -33,13 +33,13 @@ module.exports = postcss.plugin('postcss-increase-text-size', function (opts) {
 			
 			if (decl.prop === 'font-size'){
 				var propUnit = units.parse(decl.value);
-				propUnit.value = propUnit.value * opts.fontSizeMultiplyBy;
+				propUnit.value = Math.round(propUnit.value * opts.fontSizeMultiplyBy);
 				decl.value = propUnit.value + propUnit.unit;
 			}
 			
 			if (decl.prop === 'line-height'){
 				var propUnit = units.parse(decl.value);
-				propUnit.value = propUnit.value * opts.lineheightMultiplyBy;
+				propUnit.value = Math.round(propUnit.value * opts.lineheightMultiplyBy);
 				decl.value = propUnit.value + propUnit.unit;
 			}
 		});

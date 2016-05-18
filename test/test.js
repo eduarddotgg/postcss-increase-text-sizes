@@ -22,8 +22,8 @@ test('Font size or line height doesn\'t match', t => {
 			line-height: 16px;
 		}`,
 		`body {
-			font-size: 14.399999999999999px;
-			line-height: 19.2px;
+			font-size: 14px;
+			line-height: 19px;
 		}`
 	);
 });
