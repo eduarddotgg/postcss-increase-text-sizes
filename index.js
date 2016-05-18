@@ -1,10 +1,10 @@
 var postcss = require('postcss');
 var units = require('units-css');
 var parseCssFont = require('parse-css-font');
-var extend = require('util')._extend;
+var assign = require('object-assign');
 
 module.exports = postcss.plugin('postcss-increase-text-size', function (opts) {
-	opts = extend({
+	opts = assign({
 		fontSizeMultiplyBy: 1.2,
 		lineheightMultiplyBy: 1.2
 	}, opts);
