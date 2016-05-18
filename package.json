@@ -1,6 +1,6 @@
 {
   "name": "postcss-increase-text-sizes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PostCSS Increase Text Sizes is PostCSS plugin that helps automaticaly increase text size and line height",
   "keywords": [
     "postcss",
