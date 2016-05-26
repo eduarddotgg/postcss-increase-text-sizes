@@ -44,4 +44,4 @@ p{
 
 
 ## Works great with: 
-[PostCSS High Contrast]https://github.com/admdh/postcss-high-contrast
+[PostCSS High Contrast](https://github.com/admdh/postcss-high-contrast)
