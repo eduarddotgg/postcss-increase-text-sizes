@@ -41,3 +41,7 @@ p{
 |:----------------------------------|:----------------|:---------------|
 | `fontSizeMultiplyBy`              | `1.2`           | All ```font-size``` properties will be multiplied by this option |
 | `lineheightMultiplyBy`            | `1.2`           | All ```line-height``` properties will be multiplied by this option |
+
+
+## Works great with: 
+[PostCSS High Contrast] https://github.com/admdh/postcss-high-contrast
