@@ -1,3 +1,5 @@
+# 1.0.3
+- 'em', 'rem' units stay unrounded
 # 1.0.2
 - use "object-assign" insteda of util
 # 1.0.1

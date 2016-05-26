@@ -17,12 +17,23 @@ module.exports = postcss.plugin('postcss-increase-text-size', function (opts) {
 				var fontSize = units.parse(fontValue.size);
 				var lineHeight = fontValue.lineHeight;
 				var fontValueCon;
-				 
-				fontSize = Math.round(fontSize.value * opts.fontSizeMultiplyBy) + fontSize.unit;
+				
+				if (fontSize.unit == 'em' || fontSize.unit == 'rem') {
+					fontSize = fontSize.value * opts.fontSizeMultiplyBy + fontSize.unit;
+				} else {
+					fontSize = Math.round(fontSize.value * opts.fontSizeMultiplyBy) + fontSize.unit;
+				}
+				
 				 
 				if (lineHeight != 'normal' ){
 					var newlineHeight = units.parse(lineHeight)
-					newlineHeight = Math.round(newlineHeight.value * opts.lineheightMultiplyBy) + newlineHeight.unit;
+					
+					if (newlineHeight.unit == 'em' || newlineHeight.unit == 'rem') {
+						newlineHeight = newlineHeight.value * opts.lineheightMultiplyBy + newlineHeight.unit;
+					} else {
+						newlineHeight = Math.round(newlineHeight.value * opts.lineheightMultiplyBy) + newlineHeight.unit;
+					}
+					
 					fontValueCon = fontSize + '/' + newlineHeight;
 				} else {
 					fontValueCon = fontSize
@@ -33,13 +44,23 @@ module.exports = postcss.plugin('postcss-increase-text-size', function (opts) {
 			
 			if (decl.prop === 'font-size'){
 				var propUnit = units.parse(decl.value);
-				propUnit.value = Math.round(propUnit.value * opts.fontSizeMultiplyBy);
+				
+				if (propUnit.unit == 'em' || propUnit.unit == 'rem') {
+					propUnit.value = propUnit.value * opts.fontSizeMultiplyBy;
+				} else {
+					propUnit.value = Math.round(propUnit.value * opts.fontSizeMultiplyBy);
+				}
+				
 				decl.value = propUnit.value + propUnit.unit;
 			}
 			
 			if (decl.prop === 'line-height'){
 				var propUnit = units.parse(decl.value);
-				propUnit.value = Math.round(propUnit.value * opts.lineheightMultiplyBy);
+				if (propUnit.unit == 'em' || propUnit.unit == 'rem') {
+					propUnit.value = propUnit.value * opts.lineheightMultiplyBy;
+				} else {
+					propUnit.value = Math.round(propUnit.value * opts.lineheightMultiplyBy);
+				}
 				decl.value = propUnit.value + propUnit.unit;
 			}
 		});
