@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/admdh/postcss-increase-text-sizes.svg?branch=master)](https://travis-ci.org/admdh/postcss-increase-text-sizes)
-# PostCSS Increase Text Size
+# PostCSS Increase Text Sizes
 <img align="right" width="57" height="108" title="Dev Kit Main Logo" src="http://adm-designhouse.com/dev-kit-logo.png">
 
 <img align="right" width="108" height="108" title="Philosopher’s stone, logo of PostCSS" src="http://postcss.github.io/postcss/logo.svg" hspace="20">
@@ -41,3 +41,7 @@ p{
 |:----------------------------------|:----------------|:---------------|
 | `fontSizeMultiplyBy`              | `1.2`           | All ```font-size``` properties will be multiplied by this option |
 | `lineheightMultiplyBy`            | `1.2`           | All ```line-height``` properties will be multiplied by this option |
+
+
+## Works great with: 
+[PostCSS High Contrast](https://github.com/admdh/postcss-high-contrast)
