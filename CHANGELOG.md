@@ -1,3 +1,5 @@
+# 1.0.4
+- eslint 3.1.1
 # 1.0.3
 - 'em', 'rem' units stay unrounded
 # 1.0.2
