@@ -14,7 +14,7 @@ Accessible websites are getting more popular. Some countries even pass laws obli
 ## Basic Usage
 ```js
 postcss([
-	require('postcss-increase-text-size')({
+	require('postcss-increase-text-sizes')({
 		fontSizeMultiplyBy: 1.2,
 		lineheightMultiplyBy: 1.2
 	})
