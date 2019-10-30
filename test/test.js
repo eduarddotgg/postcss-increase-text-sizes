@@ -6,7 +6,8 @@ import plugin from '../';
 function run(t, input, output) {
 	return postcss([plugin({
 		fontSizeMultiplyBy: 1.2,
-		lineheightMultiplyBy: 1.2
+		lineheightMultiplyBy: 1.2,
+		selectorsBlackList: ['h2']
 	})]).process(input)
 		.then(result => {
 			t.same(result.css, output);
@@ -17,11 +18,17 @@ function run(t, input, output) {
 test('Font size or line height doesn\'t match', t => {
 	return run(
 		t,
-		`body {
+		`h2 {
+			font-size: 12px;
+		}
+		body {
 			font-size: 12px;
 			line-height: 16px;
 		}`,
-		`body {
+		`h2 {
+			font-size: 12px;
+		}
+		body {
 			font-size: 14px;
 			line-height: 19px;
 		}`
