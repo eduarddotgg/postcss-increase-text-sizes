@@ -51,11 +51,11 @@ p {
 
 ## Options
 
-| Name                   | Default Value | Description                                                         |
-| :--------------------- | :------------ | :------------------------------------------------------------------ |
-| `fontSizeMultiplyBy`   | `1.2`         | All `font-size` properties will be multiplied by this option        |
-| `lineheightMultiplyBy` | `1.2`         | All `line-height` properties will be multiplied by this option      |
-| `selectorsBlackList`   | `[]`          | All `selectorsBlackList` array of selectors which are to be ignored |
+| Name                   | Default Value | Description                                                    |
+| :--------------------- | :------------ | :------------------------------------------------------------- |
+| `fontSizeMultiplyBy`   | `1.2`         | All `font-size` properties will be multiplied by this option   |
+| `lineheightMultiplyBy` | `1.2`         | All `line-height` properties will be multiplied by this option |
+| `selectorsBlackList`   | `[]`          | Array of selectors which are to be ignored                     |
 
 ## Works great with:
 
