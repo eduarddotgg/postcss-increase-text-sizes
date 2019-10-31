@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/admdh/postcss-increase-text-sizes.svg?branch=master)](https://travis-ci.org/admdh/postcss-increase-text-sizes)
+[![Build Status](https://travis-ci.org/iamfrntdv/postcss-increase-text-sizes.svg?branch=master)](https://travis-ci.org/iamfrntdv/postcss-increase-text-sizes)
 
 # PostCSS Increase Text Sizes
 
