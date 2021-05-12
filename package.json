@@ -19,7 +19,7 @@
   "dependencies": {
     "object-assign": "4.1.1",
     "parse-css-font": "4.0.0",
-    "postcss": "7.0.21",
+    "postcss": "8.2.10",
     "units-css": "0.4.0"
   },
   "devDependencies": {
